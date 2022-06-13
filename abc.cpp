@@ -45,9 +45,10 @@ public:
 		}
 	}
 	void printItem(){
+		cout << setw(10) << "ItemNo" <<setw(40) << "Item Name" <<setw(10) << "quantity" << '\n';
 		for(int i=0;i<shopItem.size();i++){
 			if(shopItem[i].second)
-				cout<<i<<" "<<shopItem[i].first.name<<" "<<shopItem[i].second <<endl;
+				cout<<setw(10)<<i<<setw(40)<<shopItem[i].first.name<<setw(10)<<shopItem[i].second <<endl;
 		}
 	}
 };
@@ -74,6 +75,8 @@ public:
 		}
 		cout<<"Tax "<<totalTax<<endl;
 		cout<<"Price "<<totalPrice<<endl;
+		shopCart.clear();
+
 	}
 	float calculateTax(Item item, int qty)
 	{
@@ -83,9 +86,6 @@ public:
 		if(item.category==3)
 			tax+=(item.price*qty*10)/100;
 		return ceil(tax*20)/20;
-	}
-	void clearCart(){
-		shopCart.clear();
 	}
 };
 
@@ -155,9 +155,8 @@ int main()
 			else
 				isCheckout=true;
 		}
-		cart.checkOut();
-		cart.clearCart();
-		mall.updateItem(shopList);
+		cart.checkOut();  // checkout the items in cart
+		mall.updateItem(shopList); // update the items quantity after checkout
 		cout<<"if you want to shop again press y else n to close\n";
 		cin>>ans;
 		if(ans=='Y'|| ans =='y')
