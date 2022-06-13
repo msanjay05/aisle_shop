@@ -1,0 +1,9 @@
+book 10 12.49 0 no
+music_CD 10 14.99 3 no
+chocolate_bar 10 0.85 2 no
+imported_box_of_chocolates 10 10.00 2 yes
+imported_botlle_of_perfume1 10 47.50 3 yes
+imported_bottle_of_perfume2 10 27.99 3 yes
+bottle_of_perfume 10 18.99 3 no
+packet_of_headache_pills 10 9.75 1 no
+box_of_imported_chocolates 10 11.25 2 yes
